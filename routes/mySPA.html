@@ -1,0 +1,123 @@
+<DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title>Product App</title>
+        <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/javascripts/my.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-url-parser/2.3.1/purl.js"></script>
+    </head>
+
+
+
+    <body>
+
+        <div data-role="page" id="home">
+
+            <div data-theme="a" data-role="header">
+                <h3>The Notes App</h3>
+                <h4>Home Page</h4>
+                <!--
+                    <a href="#second" class="ui-btn-right">Next</a>
+                -->
+            </div>
+
+            <div data-role="content">
+
+                <div>
+                    <ul data-role="listview" data-autodividers="true" 
+                    data-theme="c" id="products"></ul>
+                </div>
+
+                <br />
+                <a href="#addpage" class="ui-btn" data-transition="flip">Go to Add Page</a>
+                <br />
+                <h5>To delete a product, copy the product name then paste after clicking next link.</h5>
+                <a href="#deletepage" class="ui-btn" data-transition="flip">Go to Delete Page</a>
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+
+        </div>
+
+
+
+        <div data-role="page" id="details-page">
+            <div data-theme="a" data-role="header">
+                <h3>The Products App</h3>
+                <h4>Details Page</h4>
+                <a href="#home" class="ui-btn-left">Back</a>
+            </div>
+
+            <div data-role="content">
+
+                <p id="detailParmHere" hidden>change1</p>
+                <p id="showdata">change2</p>
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+        <div data-role="page" id="addpage" data-theme="c">
+            <div data-role="header">
+                <h3>The Notes App</h3>
+                <h4>Add Page</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Add a new Note</h2>
+                    Priority: <input type="text" id="newPriority" size="25" /> <br />
+                    Subject: <input type="text" id="newSubject" size="60" /> <br />
+                    Descriprion: <input type="text" id="newDescription" size="5" /> <br />
+                    <input type="button" value="Add New" onclick="addItem();" />
+                </div>
+
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+
+
+        <div data-role="page" id="deletepage" data-theme="d">
+            <div data-role="header">
+                <h3>The Note App</h3>
+                <h4>Delete Page</h4>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div>
+                    <h2>Delete a Note by Note Subject</h2>
+                    <input type="text" id="deleteNoteSubject" size="25" />
+                    <input type="button" value="Delete" onclick="deleteNote();" />
+                </div>
+
+                <a href="#home" class="ui-btn" data-transition="flip" data-rel="back">Go Back</a>
+
+            </div>
+
+            <div data-role="footer">
+                <h1>copyright Izzati Hizam 2019</h1>
+            </div>
+        </div>
+
+    </body>
+
+    </html>
